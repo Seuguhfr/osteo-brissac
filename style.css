@@ -343,6 +343,11 @@ footer a:hover { color: var(--white); }
     .split-layout { flex-direction: column; gap: 30px; }
     .reverse-mobile { flex-direction: column-reverse; }
 
+    .split-layout > .text-content, 
+    .split-layout > .image-content {
+        width: 100%;
+    }
+
     /* Practitioner Specific */
     #praticien .split-layout { flex-direction: column-reverse; }
     #praticien .image-content { margin-bottom: 20px; }
