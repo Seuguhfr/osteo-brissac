@@ -87,10 +87,6 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: center;
 }
 
-.logo img {
-    height: 60px; /* Adjust based on logo quality */
-}
-
 .main-nav ul {
     display: flex;
     gap: 30px;
@@ -105,8 +101,35 @@ img { max-width: 100%; height: auto; display: block; }
 
 .main-nav a:hover { color: var(--accent-orange); }
 
+/* TEXT LOGO STYLES (Added to fix blurry image) */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-main {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    line-height: 1.2;
+}
+
+.logo-highlight {
+    color: var(--accent-orange);
+}
+
+.logo-sub {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 /* HERO SECTION */
 .hero {
+    /* Ensure this image path is correct on your computer */
     background: linear-gradient(rgba(17, 42, 72, 0.95), rgba(17, 42, 72, 0.8)), url('images/photo_exterieur.jpeg'); 
     background-size: cover;
     background-position: center;
@@ -151,10 +174,16 @@ img { max-width: 100%; height: auto; display: block; }
     margin-top: 10px;
 }
 
+/* LAYOUTS */
 .split-layout {
     display: flex;
     gap: 50px;
-    align-items: center;
+    align-items: center; /* Default align for Practitioner */
+}
+
+/* Special modification for contact section to stretch the map height */
+.split-layout.contact-split {
+    align-items: stretch; 
 }
 
 .text-content { flex: 1; }
@@ -186,14 +215,13 @@ img { max-width: 100%; height: auto; display: block; }
 .gallery-item { flex: 1; min-width: 300px; }
 .gallery-item img { border-radius: 8px; width: 100%; height: 300px; object-fit: cover; }
 
-/* CONTACT SECTION */
-
+/* CONTACT & MAP */
 .address-link {
     display: inline-block;
     color: var(--text-dark);
     font-weight: 500;
     line-height: 1.4;
-    border-bottom: 1px dashed var(--accent-orange); /* Subtle hint it's a link */
+    border-bottom: 1px dashed var(--accent-orange);
     transition: all 0.3s ease;
 }
 
@@ -203,29 +231,13 @@ img { max-width: 100%; height: auto; display: block; }
     transform: translateY(-1px);
 }
 
-/* On mobile, we make it even more obvious */
-@media (max-width: 768px) {
-    .address-link {
-        font-size: 1.1rem;
-        padding: 5px 0;
-        color: var(--primary-blue); /* Brighter on mobile for visibility */
-    }
-}
-
-.split-layout {
-    display: flex;
-    gap: 50px;
-    align-items: stretch; /* Crucial: Makes map and text exactly the same height */
-}
-
 .map-container { 
     flex: 1;
-    display: flex; /* Ensures the iframe fills the container completely */
+    display: flex; 
     flex-direction: column;
-    min-height: 600px; /* DESKTOP: Guarantees a big map even if text is short */
+    min-height: 600px; /* DESKTOP HEIGHT */
 }
 
-/* Make the iframe flexible to fill all available space */
 .map-container iframe {
     flex-grow: 1; 
     width: 100%;
@@ -239,7 +251,6 @@ img { max-width: 100%; height: auto; display: block; }
     padding: 30px; 
     background: var(--light-bg); 
     border-radius: 8px; 
-    /* Centers content vertically for a nicer look next to the big map */
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -249,44 +260,13 @@ img { max-width: 100%; height: auto; display: block; }
 .info-block h4 { color: var(--primary-blue); margin-bottom: 5px; }
 .phone-link { font-size: 1.2rem; font-weight: bold; color: var(--accent-orange); }
 
-/* --- RESPONSIVE UPDATES --- */
-
-@media (max-width: 768px) {
-    /* Existing mobile styles... */
-    .header-container { flex-direction: column; gap: 10px; }
-    .main-nav { display: none; }
-    .hero h1 { font-size: 2rem; }
-    .split-layout { flex-direction: column; }
-    .header-cta { display: none; }
-
-    /* SPECIFIC MAP UPDATE FOR MOBILE */
-    
-    /* 1. Put the map BELOW the text */
-    .reverse-mobile { 
-        flex-direction: column-reverse; 
-    }
-
-    /* 2. Remove the side gap on mobile so map hits the edges */
-    .map-container {
-        width: 100vw; /* Full width of screen */
-        margin-left: -20px; /* Negate the container padding for edge-to-edge look */
-        width: calc(100% + 40px); /* Compensate for left/right padding of container */
-        min-height: auto; /* Reset desktop restriction */
-    }
-
-    /* 3. Set height to fill the screen */
-    .map-container iframe {
-        height: 75vh; /* 85% of the screen height = Maximum Comfort */
-    }
-}
-
 /* FOOTER */
 footer {
     background: var(--primary-blue);
     color: var(--white);
     text-align: center;
     padding: 20px 0;
-    margin-bottom: 40px; /* Space for sticky button on mobile */
+    margin-bottom: 40px; 
 }
 
 footer a { color: rgba(255,255,255,0.7); font-size: 0.8rem; }
@@ -317,15 +297,37 @@ footer a:hover { color: var(--white); }
     body { padding-bottom: 0; footer { margin-bottom: 0; } }
 }
 
-/* RESPONSIVE */
+/* --- SINGLE RESPONSIVE BLOCK --- */
 @media (max-width: 768px) {
+    /* Header */
     .header-container { flex-direction: column; gap: 10px; }
-    .main-nav { display: none; /* Simplify menu for mobile, or stack links if preferred */ }
-    
+    .main-nav { display: none; }
+    .header-cta { display: none; } /* Use sticky instead */
+    .logo-main { font-size: 1.3rem; }
+
+    /* Hero */
     .hero h1 { font-size: 2rem; }
     
+    /* Layouts */
     .split-layout { flex-direction: column; }
     .reverse-mobile { flex-direction: column-reverse; }
-    
-    .header-cta { display: none; /* Hide header button on mobile, use sticky instead */ }
+
+    /* Map Specifics */
+    .map-container {
+        width: 100vw; 
+        margin-left: -20px; 
+        width: calc(100% + 40px); 
+        min-height: auto; 
+    }
+
+    .map-container iframe {
+        height: 75vh; /* Mobile Height */
+    }
+
+    /* Contact Links */
+    .address-link {
+        font-size: 1.1rem;
+        padding: 5px 0;
+        color: var(--primary-blue);
+    }
 }
