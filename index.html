@@ -8,191 +8,192 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/site.webmanifest">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo">
-                <img src="images/Logo.svg" alt="Logo Ostéo Brissac">
-            </div> 
+            <a href="#" class="logo">
+                <img src="images/Logo.svg" alt="Ostéo Brissac" style="height: 60px;"> 
+            </a>
             
             <nav class="main-nav">
                 <ul>
                     <li><a href="#praticien">Le Praticien</a></li>
-                    <li><a href="#cabinet">Le Cabinet</a></li>
-                    <li><a href="#tarifs">Tarifs</a></li>
-                    <li><a href="#contact">Contact & Accès</a></li>
+                    <li><a href="#expertises">Expertises</a></li>
+                    <li><a href="#infos">Tarifs & Horaires</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-cta">
-                <a href="https://www.doctolib.fr/osteopathe/49320/jacques-de-teyssier/booking/motives?specialityId=10&telehealth=false&placeId=practice-131913&pid=practice-131913&bookingFunnelSource=profile" target="_blank" class="btn btn-primary">Prendre Rendez-vous</a>
+                <a href="https://www.doctolib.fr/osteopathe/49320/jacques-de-teyssier" target="_blank" class="btn btn-primary">Prendre Rendez-vous</a>
             </div>
+            <div class="hamburger">☰</div>
+        </div>
+        <div class="mobile-menu">
+            <a href="#praticien">Le Praticien</a>
+            <a href="#expertises">Expertises</a>
+            <a href="#infos">Tarifs & Horaires</a>
+            <a href="#contact">Contact</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container hero-content">
-            <h1>Jacques de TEYSSIER</h1>
-            <h2>Ostéopathe D.O. à Brissac&#x2011;Quincé</h2>
-            <p>Depuis plus de 25 ans, le cabinet vous accueille de la naissance aux plus âgés</p>
-            <a href="https://www.doctolib.fr/osteopathe/49320/jacques-de-teyssier/booking/motives?specialityId=10&telehealth=false&placeId=practice-131913&pid=practice-131913&bookingFunnelSource=profile" target="_blank" class="btn btn-accent">Prendre RDV sur Doctolib</a>
+            <h1>Cabinet d'Ostéopathie<br>Jacques de Teyssier</h1>
+            <p>Une approche thérapeutique manuelle douce fondée sur une vision globale du corps humain. Situé au cœur de Brissac-Quincé depuis plus de 25 ans.</p>
+            <div class="hero-buttons">
+                <a href="https://www.doctolib.fr/osteopathe/49320/jacques-de-teyssier" target="_blank" class="btn btn-white">Prendre RDV sur Doctolib</a>
+            </div>
         </div>
     </section>
 
     <section id="praticien" class="section-padding">
         <div class="container">
-            <h3 class="section-title">Le Praticien</h3>
+            <h2 class="section-title text-center mb-large">Le Praticien</h2>
             
-            <div class="split-layout">
-                <div class="text-content">
-                    <p class="lead">Jacques de TEYSSIER vous accueille au sein de son cabinet pour des consultations d'ostéopathie adaptées à tous (adultes, enfants, sportifs, seniors).</p>
+            <div class="single-practitioner-layout">
+                <div class="practitioner-text">
+                    <h3>Jacques de Teyssier</h3>
+                    <span class="role">Ostéopathe D.O. - Masseur-Kinésithérapeute DE</span>
+                    <p>Jacques de Teyssier vous accueille au sein de son cabinet pour des consultations d'ostéopathie adaptées à tous (adultes, enfants, sportifs, seniors). Il pratique des manipulations manuelles du système musculo-squelettique et des techniques de relâchement myofascial.</p>
                     
-                    <ul class="diploma-list">
-                        <li><strong>Diplôme d'État de Masseur-Kinésithérapeute</strong> (Orléans, 1993)</li>
-                        <li><strong>Clinicat d'Ostéopathie</strong> (Paris, 2001) <br><span class="small-text">Décerné par la Collégiale Académique De France</span></li>
-                        <li><strong>Titre d'Ostéopathe</strong> reconnu par le ministère de la Santé (2008)</li>
-                        <li><strong>Licence Professionnelle de Nutrition-Micronutrition</strong> (Poitiers, 2010)</li>
-                        <li><strong>Formation en Thérapie Acupuncturale</strong> (EFBA)</li>
-                        <li><strong>Formation continue "Patchwork"</strong> (Depuis 2014)</li>
-                    </ul>
-
-                    <div class="expertise-block">
-                        <h4>Expertises et Actes</h4>
-                        <ul class="check-list">
-                            <li>Ostéopathie crânienne & structurelle</li>
-                            <li>Ostéopathie de la femme enceinte</li>
-                            <li>Suivi du nourrisson & pédiatrie</li>
-                            <li>Posturologie</li>
-                            <li>Suivi du sportif</li>
+                    <div class="diploma-box">
+                        <h4>Diplômes et Formations</h4>
+                        <ul class="diploma-list">
+                            <li><strong>1993 :</strong> Diplôme d'État de Masseur-Kinésithérapeute (Orléans)</li>
+                            <li><strong>2001 :</strong> Clinicat d'Ostéopathie (Paris) - <em>Décerné par la Collégiale Académique De France</em></li>
+                            <li><strong>2008 :</strong> Titre d'Ostéopathe reconnu par le ministère de la Santé</li>
+                            <li><strong>2010 :</strong> Licence Professionnelle de Nutrition-Micronutrition (Poitiers)</li>
+                            <li><strong>Formation :</strong> Thérapie Acupuncturale (EFBA)</li>
+                            <li><strong>Depuis 2014 :</strong> Formation continue "Patchwork"</li>
                         </ul>
                     </div>
-
                     <p class="adeli">Numéro ADELI : 49 70 18 19</p>
                 </div>
-                <div class="image-content">
-                    <img src="images/jacques_de_teyssier.jpg" alt="Jacques de Teyssier Ostéopathe">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cabinet" class="section-padding bg-light">
-        <div class="container">
-            <h3 class="section-title center-text">Le Cabinet</h3>
-            <p class="center-text mb-large">Un espace calme et dédié au soin, situé au cœur de Brissac-Quincé.</p>
-            
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="https://placehold.co/600x400/eee/265B9B?text=Salle+d'attente" alt="Salle d'attente">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://placehold.co/600x400/eee/265B9B?text=Salle+de+Consultation" alt="Salle de consultation">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tarifs" class="section-padding">
-        <div class="container">
-            <h3 class="section-title">Tarifs & Informations</h3>
-            
-            <div class="split-layout align-top">
-                <div class="text-content">
-                    <h4>Honoraires (indicatifs)</h4>
-                    <ul class="price-list">
-                        <li>
-                            <span>Consultation Adulte (Première & Suivi)</span>
-                            <span class="price">57&nbsp;€</span>
-                        </li>
-                        <li>
-                            <span>Femme enceinte (Première & Suivi)</span>
-                            <span class="price">57&nbsp;€</span>
-                        </li>
-                        <li>
-                            <span>Sportif (Première & Suivi)</span>
-                            <span class="price">57&nbsp;€</span>
-                        </li>
-                        <li>
-                            <span>Enfant / Nourrisson (Première consultation)</span>
-                            <span class="price">57&nbsp;€</span>
-                        </li>
-                        <li>
-                            <span>Enfant / Nourrisson (Consultation de suivi)</span>
-                            <span class="price">35&nbsp;€</span>
-                        </li>
-                    </ul>
-                </div>
                 
-                <div class="text-content info-box">
-                    <h4>Moyens de paiement</h4>
-                    <p>Le cabinet accepte :</p>
-                    <ul class="check-list">
-                        <li>Chèques</li>
-                        <li>Espèces</li>
-                        <li>Carte bancaire</li>
-                    </ul>
-                    <hr>
-                    <p class="small-text">
-                        <strong>Note :</strong> L'ostéopathie n'est pas remboursée par l'Assurance Maladie. Une facture vous sera remise pour une prise en charge éventuelle par votre mutuelle.
-                    </p>
+                <div class="practitioner-image-wrapper">
+                    <img src="images/jacques_de_teyssier.jpg" alt="Jacques de Teyssier" class="practitioner-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-padding bg-light">
+    <section id="expertises" class="section-padding bg-light">
         <div class="container">
-            <div class="split-layout reverse-mobile contact-split">
-                <div class="map-container">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.676644485758!2d-0.4533059232535732!3d47.34015697116664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480808a0d0d84a3d%3A0xe542617f1a3a411!2s87%20Rue%20Louis%20Moron%2C%2049320%20Brissac-Quinc%C3%A9!5e0!3m2!1sfr!2sfr!4v1703190000000!5m2!1sfr!2sfr" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h2 class="section-title text-center">Domaines d'intervention</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👶</div>
+                    <h3>Nourrissons & Enfants</h3>
+                    <p>Troubles du sommeil, plagiocéphalie, coliques, suivi de croissance.</p>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon">🤰</div>
+                    <h3>Femme Enceinte</h3>
+                    <p>Sciatiques, maux de dos, préparation à l'accouchement et post-partum.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏃</div>
+                    <h3>Sportifs</h3>
+                    <p>Traumatologie, tendinites, préparation aux épreuves et récupération.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🦴</div>
+                    <h3>Adultes & Seniors</h3>
+                    <p>Douleurs articulaires, migraines, stress, troubles digestifs, posturologie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cabinet" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Le Cabinet</h2>
+            <p class="text-center mb-large">Un espace calme et dédié au soin.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://placehold.co/600x400/f7fafc/2c7a7b?text=Salle+d'attente" alt="Cabinet Salle d'attente">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/600x400/f7fafc/2c7a7b?text=Salle+de+Consultation" alt="Salle de Consultation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="infos" class="section-padding bg-teal">
+        <div class="container">
+            <div class="split-layout align-top">
+                <div class="info-block white-card">
+                    <h3>Tarifs</h3>
+                    <ul class="price-list">
+                        <li><span>Consultation Adulte</span> <strong>57&nbsp;€</strong></li>
+                        <li><span>Femme enceinte</span> <strong>57&nbsp;€</strong></li>
+                        <li><span>Sportif</span> <strong>57&nbsp;€</strong></li>
+                        <li><span>Enfant / Nourrisson (1ère)</span> <strong>57&nbsp;€</strong></li>
+                        <li><span>Enfant / Nourrisson (Suivi)</span> <strong>35&nbsp;€</strong></li>
+                    </ul>
+                    <div class="payment-methods">
+                        <p><strong>Moyens de paiement :</strong> Chèques, Espèces, Carte bancaire.</p>
+                        <small>Une facture vous sera remise pour une prise en charge éventuelle par votre mutuelle. L'ostéopathie n'est pas remboursée par la Sécurité Sociale.</small>
+                    </div>
+                </div>
+
+                <div class="info-block white-card">
+                    <h3>Horaires d'ouverture</h3>
+                    <ul class="hours-list">
+                        <li><span>Lundi</span> <span>08h00 - 18h30</span></li>
+                        <li><span>Mardi</span> <span>14h00 - 18h30</span></li>
+                        <li><span>Mercredi</span> <span>08h00 - 18h30</span></li>
+                        <li><span>Jeudi</span> <span>08h00 - 18h30</span></li>
+                        <li><span>Vendredi</span> <span>08h00 - 18h30</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="split-layout contact-layout">
                 <div class="contact-info">
-                    <h3 class="section-title">Contact & Accès</h3>
+                    <h2 class="section-title">Contact & Accès</h2>
                     
-                    <div class="info-block">
-                        <h4>Adresse</h4>
-                        <p class="address">
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div>
+                            <strong>Adresse</strong><br>
                             87 bis, rue Louis Moron<br>
                             49320 Brissac-Quincé
-                        </p>
+                        </div>
                     </div>
 
-                    <div class="info-block">
-                        <h4>Horaires d'ouverture</h4>
-                        <p><strong>Lundi, Mercredi, Jeudi, Vendredi :</strong><br> 08h00 - 18h30</p>
-                        <p style="margin-top: 10px;"><strong>Mardi :</strong><br> 14h00 - 18h30</p>
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <div>
+                            <strong>Téléphone</strong><br>
+                            Cabinet : <a href="tel:0241912408">02 41 91 24 08</a><br>
+                            Urgence : <a href="tel:0612454545">06 12 45 45 45</a>
+                        </div>
                     </div>
 
-                    <div class="info-block access-guide">
-                        <h4>Itinéraire</h4>
-                        <p><strong>En arrivant au rond-point :</strong> Prendre direction Brissac-Quincé Centre. Vous êtes rue Louis Moron.</p>
+                    <div class="access-details">
+                        <h4>Itinéraire & Parking</h4>
                         <p><strong>Repère :</strong> Place Montgolfière (place commerçante).</p>
-                        <p>Le cabinet se situe à votre droite, <strong>entre le cabinet dentaire et le laboratoire d'analyse médicale.</strong></p>
-                        <p style="margin-top:10px;"><strong>Stationnement :</strong></p>
-                        <ul class="simple-list">
+                        <p>Le cabinet se situe à votre droite, entre le cabinet dentaire et le laboratoire d'analyse médicale.</p>
+                        <ul>
                             <li>Parking en face des auto-écoles.</li>
                             <li>Parking en face du laboratoire.</li>
+                            <li>Accès handicapé (Rez-de-chaussée).</li>
                         </ul>
                     </div>
-                    
-                    <div class="info-block">
-                        <h4>Téléphone</h4>
-                        <p><a href="tel:0241912408" class="phone-link">02 41 91 24 08</a></p>
-                        <p><strong>Urgence (Portable) : </strong><a href="tel:0612454545">06 12 45 45 45</a></p>
-                    </div>
-                    
-                    <div class="info-block">
-                        <a href="https://www.doctolib.fr/osteopathe/49320/jacques-de-teyssier/booking/motives?specialityId=10&telehealth=false&placeId=practice-131913&pid=practice-131913&bookingFunnelSource=profile" target="_blank" class="btn btn-primary full-width">Prendre RDV en ligne</a>
-                    </div>
+                </div>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.568326260714!2d-0.4526556841804791!3d47.34241671421683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480879a617614e59%3A0x6b0933405c1d6835!2s87%20Bis%20Rue%20Louis%20Moron%2C%2049320%20Brissac-Loire-Aubance!5e0!3m2!1sfr!2sfr!4v1675345612345!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -205,8 +206,22 @@
     </footer>
 
     <div class="mobile-sticky-cta">
-        <a href="https://www.doctolib.fr/osteopathe/49320/jacques-de-teyssier/booking/motives?specialityId=10&telehealth=false&placeId=practice-131913&pid=practice-131913&bookingFunnelSource=profile" target="_blank">Prendre RDV (Doctolib)</a>
+        <a href="https://www.doctolib.fr/osteopathe/49320/jacques-de-teyssier" target="_blank">Prendre RDV sur Doctolib</a>
     </div>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
