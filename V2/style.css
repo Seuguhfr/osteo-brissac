@@ -23,7 +23,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--white);
-    /* removed global padding-bottom to fix desktop gap */
+    /* No bottom padding on desktop to avoid gap */
 }
 
 h1, h2, h3, h4 {
@@ -49,19 +49,13 @@ img { max-width: 100%; display: block; }
 .text-center { text-align: center; }
 .mb-large { margin-bottom: 50px; }
 
-/* --- TYPOGRAPHY UPDATES (Bigger Titles) --- */
+/* --- TYPOGRAPHY UPDATES --- */
 .section-title {
-    font-size: 2.5rem; /* Increased from 2rem */
+    font-size: 2.5rem;
     font-weight: 700;
 }
-
-h3 {
-    font-size: 1.75rem; /* Increased */
-}
-
-h4 {
-    font-size: 1.3rem;
-}
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.3rem; }
 
 /* --- BUTTONS --- */
 .btn {
@@ -79,7 +73,6 @@ h4 {
     background-color: var(--primary-color);
     color: var(--white);
 }
-
 .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
 
 .btn-white {
@@ -104,10 +97,7 @@ h4 {
     height: 80px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
+.logo { display: flex; align-items: center; }
 
 .main-nav ul { display: flex; gap: 30px; }
 .main-nav a { font-weight: 500; font-size: 0.95rem; }
@@ -135,11 +125,10 @@ h4 {
 
 .hero h1 { 
     color: var(--white); 
-    font-size: 4rem; /* Increased from 3.5rem */
+    font-size: 4rem; 
     margin-bottom: 20px; 
     line-height: 1.1; 
 }
-
 .hero p { font-size: 1.35rem; max-width: 600px; margin: 0 auto 40px; opacity: 0.95; }
 .hero-buttons { display: flex; gap: 20px; justify-content: center; }
 
@@ -150,13 +139,10 @@ h4 {
     align-items: flex-start;
 }
 
-.practitioner-text {
-    flex: 1;
-}
+.practitioner-text { flex: 1; }
 
 .practitioner-image-wrapper {
     flex: 0 0 350px;
-    /* Removed max-width constraints that might mess up desktop layout */
 }
 
 .practitioner-img {
@@ -164,7 +150,7 @@ h4 {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     border: 5px solid var(--white);
-    object-fit: cover; /* Keeps it nice on desktop */
+    object-fit: cover;
 }
 
 .role { 
@@ -258,9 +244,7 @@ h4 {
 .payment-methods { margin-top: 20px; font-size: 0.9rem; background: var(--bg-light); padding: 15px; border-radius: 4px; }
 
 /* --- CONTACT --- */
-.contact-layout {
-    align-items: stretch;
-}
+.contact-layout { align-items: stretch; }
 .contact-item {
     display: flex;
     align-items: flex-start;
@@ -325,7 +309,7 @@ footer {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    /* Fixed bottom gap issue: Only apply padding when CTA is visible */
+    /* Padding bottom only on mobile for the sticky CTA */
     body { padding-bottom: 60px; }
     
     .header-cta, .main-nav { display: none; }
@@ -334,16 +318,20 @@ footer {
     .hero h1 { font-size: 2.5rem; }
     .hero-buttons { flex-direction: column; }
     
-    /* Layout Adjustments */
     .single-practitioner-layout { flex-direction: column-reverse; gap: 30px; }
-    .practitioner-image-wrapper { flex: auto; width: 100%; margin-bottom: 20px; }
     
-    /* Image Fix: height auto prevents cropping on mobile */
+    /* MOBILE IMAGE FIX: Constrain width and center */
+    .practitioner-image-wrapper { 
+        flex: auto; 
+        width: 100%; 
+        max-width: 320px; /* Limits the size */
+        margin: 0 auto 20px; /* Centers the image */
+    }
+    
     .practitioner-img { 
         height: auto; 
-        max-height: 500px; /* safety cap */
-        object-fit: contain; /* ensures full image is visible */
-        object-position: top center;
+        max-height: 400px; /* Reasonable height cap */
+        object-fit: cover; 
     }
     
     .split-layout, .gallery-grid, .contact-layout {
