@@ -290,9 +290,18 @@ footer a:hover { color: var(--white); }
     .reverse-mobile { flex-direction: column-reverse; }
 
     #praticien .split-layout {
-        flex-direction: column-reverse;
+        display: flex;
+        flex-direction: column-reverse; /* Flips the order so image-content (bottom in HTML) appears top */
     }
-    
+
+    #praticien .image-content {
+        margin-bottom: 20px; /* Adds space between the photo and the text below it */
+    }
+
+    #praticien .section-title {
+        margin-bottom: 30px; /* Ensures the title has space before the image starts */
+    }
+
     /* Map Specifics */
     .map-container {
         width: 100vw; 
