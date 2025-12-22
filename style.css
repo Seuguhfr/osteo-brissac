@@ -289,6 +289,10 @@ footer a:hover { color: var(--white); }
     .split-layout { flex-direction: column; }
     .reverse-mobile { flex-direction: column-reverse; }
 
+    #praticien .split-layout {
+        flex-direction: column-reverse;
+    }
+    
     /* Map Specifics */
     .map-container {
         width: 100vw; 
