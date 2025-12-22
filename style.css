@@ -210,6 +210,11 @@ h4 {
 .small-text { font-size: 0.85rem; color: var(--text-light); font-style: italic; }
 .adeli { font-weight: bold; color: var(--primary-blue); margin-top: 20px; }
 
+.info-box hr + .small-text {
+    margin-top: 15px;
+    display: block; /* Ensures margin is respected */
+}
+
 /* PRICE LIST */
 .price-list li {
     display: flex;
