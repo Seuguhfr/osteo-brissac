@@ -87,6 +87,10 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: center;
 }
 
+.logo img {
+    height: 60px; /* Adjust based on logo quality */
+}
+
 .main-nav ul {
     display: flex;
     gap: 30px;
@@ -101,35 +105,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .main-nav a:hover { color: var(--accent-orange); }
 
-/* TEXT LOGO STYLES (Added to fix blurry image) */
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.logo-main {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-blue);
-    line-height: 1.2;
-}
-
-.logo-highlight {
-    color: var(--accent-orange);
-}
-
-.logo-sub {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
 /* HERO SECTION */
 .hero {
-    /* Ensure this image path is correct on your computer */
     background: linear-gradient(rgba(17, 42, 72, 0.95), rgba(17, 42, 72, 0.8)), url('images/photo_exterieur.jpeg'); 
     background-size: cover;
     background-position: center;
