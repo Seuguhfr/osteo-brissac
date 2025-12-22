@@ -107,7 +107,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(17, 42, 72, 0.95), rgba(17, 42, 72, 0.8)), url('/images/photo_exterieur.jpeg'); 
+    background: linear-gradient(rgba(17, 42, 72, 0.95), rgba(17, 42, 72, 0.8)), url('images/photo_exterieur.jpeg'); 
     background-size: cover;
     background-position: center;
     color: var(--white);
