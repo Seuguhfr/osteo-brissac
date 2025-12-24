@@ -18,6 +18,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     color: var(--text-color);
@@ -114,13 +118,17 @@ h4 { font-size: 1.3rem; }
 
 /* --- HERO --- */
 .hero {
-    background: linear-gradient(rgba(44, 122, 123, 0.9), rgba(35, 78, 82, 0.85)), url('images/photo_exterieur.jpeg') center/cover;
+    background: linear-gradient(rgba(44, 122, 123, 0.7), rgba(35, 78, 82, 0.7)), url('images/photo_exterieur.jpeg') center/cover;
     height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
+}
+
+.hero h1, .hero p {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
 .hero h1 { 
@@ -203,7 +211,13 @@ h4 { font-size: 1.3rem; }
 }
 
 .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-.service-icon { font-size: 2.5rem; margin-bottom: 20px; }
+
+/* UPDATE: Added color to the service icons */
+.service-icon { 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    color: var(--primary-color);
+}
 
 /* --- GALLERY --- */
 .gallery-grid {
@@ -250,10 +264,13 @@ h4 { font-size: 1.3rem; }
     align-items: flex-start;
     margin-bottom: 25px;
 }
+
+/* UPDATE: Added color to contact icons */
 .contact-item .icon {
     font-size: 1.5rem;
     margin-right: 15px;
     background: var(--accent-light);
+    color: var(--primary-color);
     width: 40px;
     height: 40px;
     display: flex;
