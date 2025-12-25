@@ -20,6 +20,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -240,12 +241,18 @@ h4 { font-size: 1.3rem; }
     grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
+
 .info-block.white-card {
     background: var(--white);
     color: var(--text-color);
     padding: 40px;
     border-radius: var(--radius);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    
+    /* --- NEW LINES FOR ALIGNMENT --- */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures the card stretches to match the height of the neighbor */
 }
 
 .price-list li, .hours-list li {
@@ -254,8 +261,16 @@ h4 { font-size: 1.3rem; }
     padding: 12px 0;
     border-bottom: 1px solid #eee;
 }
+
 .price-list li:last-child, .hours-list li:last-child { border-bottom: none; }
 .payment-methods { margin-top: 20px; font-size: 0.9rem; background: var(--bg-light); padding: 15px; border-radius: 4px; }
+
+.card-cta {
+    margin-top: auto; /* This magic line pushes the button to the bottom */
+    padding-top: 30px; /* Adds space between the hours list and the button */
+    text-align: center;
+    width: 100%;
+}
 
 /* --- CONTACT --- */
 .contact-layout { align-items: stretch; }
@@ -355,6 +370,11 @@ footer {
         grid-template-columns: 1fr;
         display: flex;
         flex-direction: column;
+    }
+
+    .card-cta .btn {
+        width: 100%;
+        text-align: center;
     }
     
     .contact-layout { flex-direction: column-reverse; }
